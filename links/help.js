@@ -3,12 +3,13 @@ module.exports = {
   name: "help",
    run : async function(client, vest,args){
     let prefix = '/'
+    const a = vest.content.split(' ')
    let sat = new Discord.MessageEmbed()
       .setTitle('Bot Help :')
       .setColor("Gray")
       .setDescription(`
       **bot cmd **
-      ${prefix}bot-link : create invite url of the bots
+      ${a[0][0]}bot-link : create invite url of the bots
       ${prefix}server-link : create invite url of your server
       ${prefix}ping : bot pong!
 
