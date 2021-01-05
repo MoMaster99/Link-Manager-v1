@@ -4,6 +4,9 @@
 # Usage: 
 
 Commands:
+*`/help`*
+
+*`/ping`*
 
 *`/bot-link`*
 
