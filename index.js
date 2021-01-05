@@ -29,7 +29,7 @@ client.on("ready", async => {
 
 
 
-client.login(process.env.token);
+client.login(config.token);
 
 client.on("message", async message => {
   if (message.author.bot) return;
