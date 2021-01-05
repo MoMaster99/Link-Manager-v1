@@ -143,13 +143,7 @@ message.channel.send(error)
  
         })
 client.on('message', message => {
-  let link = /(http|https)?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
-    if(message.content==link){
-            if(!antilink[message.guild.id]) antilink[message.guild.id] = {
-onoff: 'Off'
-
- }
- let er = new Discord.MessageEmbed()
+   let er = new Discord.MessageEmbed()
       .setTitle('Anti  link :')
       .setColor("Gray")
       .setDescription(`The anti link is on you cant send this message`)
@@ -157,9 +151,20 @@ onoff: 'Off'
   ,message.author.avatarURL())
    .setThumbnail(message.author.avatarURL())
 
-
- if(antilink[message.guild.id].onoff === 'Off') return;
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('https:/')||
+    message.content.includes('http')||
+    message.content.includes('.com')||
+    message.content.includes('.gg')||
+    message.content.includes('.it')
+    ){
+            if(!antilink[message.guild.id]) antilink[message.guild.id] = {
+        onoff: 'Off'
+ 
+            }
+        if(antilink[message.guild.id].onoff === 'Off') return;
         message.delete()
-    return message.reply(er)
+    return message.reply( er)
     }
 });
+ 
