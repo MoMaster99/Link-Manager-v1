@@ -3,7 +3,6 @@
 
 # Usage: 
 
-Commands:
 *`/help`*
 
 *`/ping`*
@@ -14,7 +13,7 @@ Commands:
 
 *`/antilink-on`*
 
-*`//antilink-of`*
+*`/antilink-of`*
 
 Code By 'Mάster. Moon Codes
 
